@@ -13,6 +13,11 @@ Partner::Partner(const Partner& theOther):id(nextId++) {
 	generatePrivateKey();
 }
 
+Partner::~Partner()
+{
+	delete privateKey;
+}
+
 long Partner::getId()const {
 	return id;
 }
@@ -24,6 +29,7 @@ string Partner::getPrivateKey()const {
 void Partner::generatePrivateKey() {
 	const char charSet[] = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	const int charNum = sizeof(charSet) - 1;
+	privateKey = new char[charNum];
 	for (int i = 0; i < 2000; i++) {
 		privateKey[i] = charSet[rand() % charNum];
 	}

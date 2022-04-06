@@ -17,3 +17,4 @@ public:
 
 	std::string getBusinessName()const;
 	std::string getVATIN()const;
+};

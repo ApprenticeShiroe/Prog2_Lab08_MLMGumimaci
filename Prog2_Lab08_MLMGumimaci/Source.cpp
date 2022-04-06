@@ -16,7 +16,7 @@ int main() {
 	Person p1;
 	Person p2("Alma", "Nev", "342643142");
 	Person p3(p2);
-	cout << p3 << endl;
+	cout << p2.getFirstName() << endl;
 
 	return 0;
 }

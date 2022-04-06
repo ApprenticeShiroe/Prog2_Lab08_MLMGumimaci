@@ -2,9 +2,9 @@
 
 using namespace std;
 
-Company::Company() :businessName("Null"), VATIN("0"){}
+Company::Company() :Partner(),businessName("Null"), VATIN("0"){}
 
-Company::Company(string pBusinessName, string pVATIN) : businessName(pBusinessName), VATIN(pVATIN){}
+Company::Company(string pBusinessName, string pVATIN) :Partner(), businessName(pBusinessName), VATIN(pVATIN){}
 
 Company::Company(const Company& theOther) : Partner(theOther), businessName(theOther.businessName), VATIN(theOther.VATIN) {}
 

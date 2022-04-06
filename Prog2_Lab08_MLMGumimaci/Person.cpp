@@ -4,7 +4,7 @@ using namespace std;
 
 Person::Person():Partner(),firstName("John"),lastName("Doe"),taxNumber("0") {}
 
-Person::Person(string pFirstName, string pLastName, string pTaxNumber):firstName(pFirstName),lastName(pLastName),taxNumber(pTaxNumber) {}
+Person::Person(string pFirstName, string pLastName, string pTaxNumber):Partner(),firstName(pFirstName),lastName(pLastName),taxNumber(pTaxNumber) {}
 
 Person::Person(const Person& theOther) : Partner(theOther),firstName(theOther.firstName),lastName(theOther.lastName),taxNumber(theOther.taxNumber) {}
 

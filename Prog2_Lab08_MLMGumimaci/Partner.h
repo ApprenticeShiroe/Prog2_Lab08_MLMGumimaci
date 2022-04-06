@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string>
 
-using namespace std;
 
 class Partner
 {
@@ -13,6 +12,7 @@ protected:
 public:
 	Partner();
 	Partner(const Partner&);
+	~Partner();
 	
 	void generatePrivateKey();
 	long getId() const;
@@ -20,4 +20,4 @@ public:
 
 };
 
-ostream& operator<<(std::ostream&, Partner);
+std::ostream& operator<<(std::ostream&, Partner);
